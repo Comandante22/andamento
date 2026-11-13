@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andamento | Alertas processuais e atendimento virtual</title>
+<meta name="description" content="Conheça o Andamento, uma prévia de acompanhamento processual com histórico de alertas e atendimento virtual em linguagem simples.">
+<link rel="canonical" href="https://comandante22.github.io/andamento/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Andamento | Alertas processuais e atendimento virtual">
+<meta property="og:description" content="Entenda o que mudou no seu processo e quando o aviso foi enviado. Conheça a prévia do Andamento.">
+<meta property="og:url" content="https://comandante22.github.io/andamento/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Andamento","url":"https://comandante22.github.io/andamento/","inLanguage":"pt-BR","description":"Apresentação do Andamento, uma prévia de acompanhamento processual com atendimento virtual."}
+</script>
+<style>
+:root{color:#182d23;background:#f6f7ef;font:16px/1.55 "Instrument Sans",system-ui,sans-serif}
+*{box-sizing:border-box}body,h1,h2,h3,p,dl,dd{margin:0}a{color:inherit}
+.wrap{width:min(100% - 36px,1120px);margin-inline:auto}
+header{background:#f6f7ef;border-bottom:1px solid #d8e2d7}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:76px}
+.brand{font-size:1.5rem;font-weight:800;letter-spacing:-.06em;text-decoration:none}
+.hero{background:#19392c;color:#f6f7ef;padding:clamp(42px,8vw,100px) 0}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.9fr);align-items:center;gap:clamp(24px,6vw,76px)}
+h1,h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;letter-spacing:-.052em;line-height:1.02}
+h1{font-size:clamp(3rem,7vw,6rem);max-width:11ch}
+h2{font-size:clamp(2rem,4vw,3.25rem)}
+.intro{max-width:45ch;color:#dbe9db;margin:20px 0 24px;font-size:1.08rem}
+.button{display:inline-flex;align-items:center;gap:12px;min-height:46px;padding:9px 16px;border-radius:6px;background:#c0f2ad;color:#193123;font-weight:800;text-decoration:none}
+a:focus-visible{outline:3px solid #398559;outline-offset:4px}
+.example{background:#f6f7ef;color:#182d23;padding:clamp(18px,4vw,29px);border-radius:10px}
+.example h2{font:800 1.24rem/1.2 system-ui,sans-serif;letter-spacing:-.035em}
+.caption{color:#496354;font-size:.86rem;margin-top:5px}
+dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}
+dl div{padding-top:10px;border-top:2px solid #8cb59a}
+dt{font-size:.8rem;color:#496354}dd{font-size:1.15rem;font-weight:750;font-variant-numeric:tabular-nums}
+.reply{margin-top:18px;border-left:3px solid #377853;padding-left:12px}
+.reply p{margin-top:4px}
+section.info{padding-block:50px;border-bottom:1px solid #d8e2d7}
+.info .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:24px}
+.info p{max-width:60ch}
+footer{padding-block:25px;color:#496354}
+@media(max-width:700px){.hero .wrap,.info .wrap{grid-template-columns:1fr}h1{max-width:14ch}.hero{padding-block:40px}.button{padding-inline:11px}.info p{max-width:none}}
+.chat-launcher{position:fixed;z-index:20;right:22px;bottom:calc(20px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:10px;min-height:54px;padding:0 19px;border:0;border-radius:999px;background:#1d4836;color:white;font:750 .94rem system-ui,sans-serif;box-shadow:0 5px 16px #12342436;cursor:pointer}
+.chat-launcher:hover{background:#245d44}
+.chat-icon{width:19px;height:15px;border:2px solid currentColor;border-radius:5px;position:relative;display:inline-block}
+.chat-icon::after{content:'';position:absolute;width:5px;height:5px;bottom:-4px;left:2px;background:#1d4836;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:skewY(-30deg)}
+.chat-window[hidden]{display:none}
+.chat-window{position:fixed;right:22px;bottom:calc(84px + env(safe-area-inset-bottom));width:min(390px,calc(100vw - 32px));height:min(615px,calc(100dvh - 105px - env(safe-area-inset-bottom)));z-index:21;border:1px solid #cddcd0;border-radius:16px;background:#f6f8f4;box-shadow:0 12px 42px #12342435;overflow:hidden;color:#192823;text-align:left}
+.chat-shell{height:100%;display:flex;flex-direction:column}
+.chat-bar{background:#1d4836;color:white;display:flex;align-items:center;gap:10px;padding:11px 13px}
+.chat-avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#d5efd1;color:#1d4836;font-weight:850;flex:none}
+.chat-bar h2{font:750 .99rem/1.2 system-ui,sans-serif;margin:0;letter-spacing:0}
+.chat-bar small{color:#deefdf;font-size:.75rem;display:block;margin-top:2px}
+.chat-close{margin-left:auto;min-width:44px;min-height:44px;border:0;background:transparent;color:white;font:1.55rem system-ui,sans-serif;cursor:pointer;border-radius:7px}
+.chat-close:hover{background:#ffffff22}
+.chat-context{padding:7px 13px;background:#e7f0e7;font-size:.77rem;margin:0;color:#385848}
+.chat-log{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:13px;margin:0}
+.chat-turn{max-width:91%;padding:9px 12px;background:white;border:1px solid #e0e9df;border-radius:3px 13px 13px 13px;font-size:.87rem;line-height:1.42;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+.chat-turn.user{align-self:flex-end;background:#dff0df;border-color:#d7e7d7;border-radius:13px 3px 13px 13px}
+.chat-turn strong{display:block;color:#35664d;font-size:.72rem;margin-bottom:3px}
+.chat-tools{padding:7px 11px;border-top:1px solid #dce5dd;background:#fff}
+.chat-suggestions{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 7px}
+.chat-chip,.chat-send{min-height:44px;padding:5px 9px;border:1px solid #bdcec0;border-radius:7px;background:white;color:#204a35;font:650 .76rem system-ui,sans-serif;cursor:pointer}
+.chat-composer{display:flex;align-items:end;gap:7px;margin:0}
+.chat-composer textarea{flex:1;min-width:0;min-height:44px;max-height:90px;resize:vertical;border:1px solid #bdcec0;border-radius:8px;padding:8px;color:#192823;font:16px system-ui,sans-serif}
+.chat-send{background:#1d4836;color:white;border-color:#1d4836;font-size:.84rem}
+.chat-meta{display:block;color:#526259;font-size:.72rem;line-height:1.35;margin:0 0 6px}
+.chat-meta input{vertical-align:middle}
+.chat-composer-status{font-size:.73rem;color:#526259;margin:5px 0 0}
+.chat-composer-status:empty{display:none}
+.chat-window :focus-visible,.chat-launcher:focus-visible{outline:3px solid #5c9c6e;outline-offset:2px}
+.chat-bar :focus-visible{outline-color:white}
+@media(max-width:480px){.chat-launcher{right:12px;bottom:calc(12px + env(safe-area-inset-bottom))}.chat-window{right:8px;bottom:calc(74px + env(safe-area-inset-bottom));width:calc(100vw - 16px);height:min(610px,calc(100dvh - 85px - env(safe-area-inset-bottom)))}}
+
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="./">Andamento</a><button class="button" type="button" data-open-chat aria-controls="public-chat" aria-expanded="false" style="border:0;cursor:pointer;font:inherit;font-weight:750">Atendimento virtual <span aria-hidden="true">↗</span></button></div></header>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div><h1>Entenda o que mudou no seu processo.</h1><p class="intro">Conheça a prévia do Andamento. Veja como o app organiza os avisos e explica o andamento do processo em linguagem simples.</p><a class="button" href="#atendimento">Veja como tirar suas dúvidas <span aria-hidden="true">↓</span></a></div>
+      <article class="example" aria-labelledby="exemplo">
+        <h2 id="exemplo">Despacho registrado</h2>
+        <p class="caption">Exemplo fictício · 13/11/2026 · horário de Brasília</p>
+        <dl><div><dt>Registro no tribunal</dt><dd>09h10</dd></div><div><dt>App recebeu</dt><dd>10h20</dd></div><div><dt>Aviso enviado</dt><dd>10h25</dd></div></dl>
+        <div class="reply"><strong>O que isso significa?</strong><p>O juiz registrou uma instrução para o processo seguir. O texto do despacho mostra o que foi pedido.</p></div>
+      </article>
+    </div>
+  </section>
+  <section id="atendimento" class="info">
+    <div class="wrap"><h2>Tire suas dúvidas com o atendimento virtual</h2><div><p>Na prévia, você pode escrever uma pergunta sobre um alerta fictício e continuar a conversa. A atendente explica os termos e mostra o que ainda precisa ser conferido no documento oficial.</p><p class="caption">O chat está em fase de teste. A prévia exige acesso privado.</p></div></div>
+  </section>
+  <section class="info" aria-labelledby="avisos">
+    <div class="wrap"><h2 id="avisos">Histórico de alertas</h2><p>A prévia mostra três horários: quando o tribunal registrou a movimentação, quando o app recebeu o dado e quando o aviso foi enviado.</p></div>
+  </section>
+</main>
+<footer class="wrap">Andamento · Apresentação pública do projeto</footer>
+<button class="chat-launcher" type="button" data-open-chat aria-controls="public-chat" aria-expanded="false"><span class="chat-icon" aria-hidden="true"></span>Fale com a gente</button>
+<aside class="chat-window" id="public-chat" role="dialog" aria-labelledby="public-chat-title" hidden>
+  <section class="chat-shell">
+    <div class="chat-bar"><span class="chat-avatar" aria-hidden="true">A</span><div><h2 id="public-chat-title">Equipe Andamento</h2><small>Atendimento virtual · demonstração</small></div>
+    <button class="chat-close" type="button" aria-label="Minimizar atendimento">−</button></div>
+    <div class="chat-log" role="log" aria-label="Conversa">
+      <p class="chat-turn"><strong>Agente virtual</strong>Olá! Um dos nossos agentes virtuais vai atender você. Como podemos ajudar?</p>
+    </div>
+    <div class="chat-tools">
+      <div class="chat-suggestions"><button class="chat-chip" type="button">Como funcionam os alertas?</button><button class="chat-chip" type="button">O que é um despacho?</button></div>
+      <p class="chat-meta">Demonstração pública. Use exemplos fictícios e evite dados pessoais.</p>
+      <form class="chat-composer">
+        <textarea rows="1" aria-label="Sua mensagem" placeholder="Digite sua mensagem…" required maxlength="400"></textarea>
+        <button class="chat-send" type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+</aside>
+<script>
+const widget = document.querySelector('#public-chat');
+const launchers = document.querySelectorAll('[data-open-chat]');
+const log = widget.querySelector('[role="log"]');
+const form = widget.querySelector('form');
+const input = form.querySelector('textarea');
+const minimize = widget.querySelector('.chat-close');
+let opener;
+function openChat(button){
+  opener=button;
+  widget.hidden=false;
+  launchers.forEach(launcher=>launcher.setAttribute('aria-expanded','true'));
+  minimize.focus();
+  log.scrollTop=log.scrollHeight;
+}
+function closeChat(){
+  widget.hidden=true;
+  launchers.forEach(launcher=>launcher.setAttribute('aria-expanded','false'));
+  opener?.focus();
+}
+launchers.forEach(button=>button.addEventListener('click',()=>openChat(button)));
+minimize.addEventListener('click',closeChat);
+widget.addEventListener('keydown',event=>{if(event.key==='Escape') closeChat()});
+function addMessage(role,content){
+  const bubble=document.createElement('p');
+  bubble.className='chat-turn '+role;
+  const author=document.createElement('strong');
+  author.textContent=role==='user'?'Você':'Agente virtual';
+  bubble.append(author,document.createTextNode(content));
+  log.append(bubble);
+  log.scrollTop=log.scrollHeight;
+}
+function reply(message){
+  const question=message.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  if(/despacho/.test(question)) return 'Um despacho é uma instrução do juiz para o processo seguir. O texto do despacho informa o que foi pedido.';
+  if(/alerta|aviso|horario|notific/.test(question)) return 'O aviso de exemplo mostra quando o tribunal registrou a movimentação, quando o app recebeu o dado e quando enviou a notificação.';
+  if(/proximo|prazo|urgente|audiencia/.test(question)) return 'O próximo passo depende do documento oficial. Se houver prazo ou audiência, confirme as informações com seu advogado ou com a Defensoria Pública.';
+  if(/obrigad|valeu/.test(question)) return 'De nada! Se quiser, pode mandar outra pergunta.';
+  return 'Neste chat de demonstração, posso explicar o exemplo de despacho e mostrar como funcionam os alertas. Qual desses assuntos você quer ver?';
+}
+function send(message){
+  const text=message.trim();
+  if(!text) return;
+  addMessage('user',text);
+  addMessage('assistant',reply(text));
+}
+form.addEventListener('submit',event=>{
+  event.preventDefault();
+  send(input.value);
+  input.value='';
+  input.focus();
+});
+widget.querySelectorAll('.chat-chip').forEach(button=>button.addEventListener('click',()=>send(button.textContent)));
+</script>
+</body>
+</html>
